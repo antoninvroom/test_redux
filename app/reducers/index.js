@@ -3,5 +3,6 @@ import loginReducer from './authReducer';
 import profileReducer from './profileReducer';
 
 export default combineReducers({
-  auth: loginReducer
+  auth: loginReducer,
+  profile: profileReducer
 });

@@ -10,11 +10,6 @@ import { Card, CardSection, Button } from '../../components/common';
 
 class Login extends Component {
 
-  // how sould I use it ?
-  componentWillMount() {
-    
-  }
-
   render() {
     console.log(this.props.auth);
     const { actions, auth } = this.props;
@@ -31,7 +26,7 @@ class Login extends Component {
       <View>
         <Card>
           <CardSection>
-            { auth.loggedIn ? this.props.navigation.navigate('Home') : loginComponent }
+            { auth.loggedIn ? this.props.navigation.navigate('Home', {coucou: 'coucou'}) : loginComponent }
           </CardSection>
         </Card>
       </View>

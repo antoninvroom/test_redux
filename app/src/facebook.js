@@ -5,7 +5,7 @@ import {
   GraphRequestManager,
 } from 'react-native-fbsdk';
 
-const facebookParams = 'id,name,email,picture.width(100).height(100)';
+const facebookParams = 'id';
 
 export function getInfo() {
   return new Promise((resolve, reject) => {
@@ -43,11 +43,11 @@ export function facebookLogin() {
         reject('error: we need permission to connect');
       }
       return AccessToken.getCurrentAccessToken();
-      getInfo().then((userDetails) => {
+      /*getInfo().then((userDetails) => {
         resolve(userDetails);
       }).catch((requestError) => {
         reject(requestError);
-      });
+      });*/
     })
     .then((result) => {
       resolve(result);

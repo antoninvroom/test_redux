@@ -4,10 +4,13 @@ import { View, Text } from 'react-native';
 import { Header } from '../../components/common';
 
 class Home extends Component {
+
+
   render() {
+    const {state} = this.props.navigation;
     return (
       <View>
-        <Text> Hello Navigation Home </Text>
+        <Text> {state.params.coucou} </Text>
       </View>
     );
   }

@@ -50,7 +50,8 @@ export function login() {
     facebookLogin().then((result) => {
       console.log('Facebook login success');
       dispatch(loggedin());
-      dispatch(addUser(result.id, result.name, result.picture.data.url, result.picture.data.width, result.data.height));
+      console.log(result);
+      //dispatch(addUser(result.id, result.name, result.picture.data.url, result.picture.data.width, result.data.height));
     }).catch((err) => {
       dispatch(errors(err));
     });
