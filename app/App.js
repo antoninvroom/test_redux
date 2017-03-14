@@ -14,7 +14,7 @@ const store = compose(
   applyMiddleware(thunkMiddleware)
 )(createStore)(reducers);
 
-//persistStore(store, { storage: AsyncStorage });
+persistStore(store, { storage: AsyncStorage });
 
 class App extends Component {
   render() {

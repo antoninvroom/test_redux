@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { Button } from '../common';
-
-
 
 
 class LoginButton extends Component {
