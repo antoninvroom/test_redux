@@ -5,12 +5,14 @@ import { Header } from '../../components/common';
 
 class Home extends Component {
 
+  componentWillReceiveProps() {
+
+  }
 
   render() {
-    const {state} = this.props.navigation;
     return (
       <View>
-        <Text> {state.params.coucou} </Text>
+        <Text> Home page </Text>
       </View>
     );
   }

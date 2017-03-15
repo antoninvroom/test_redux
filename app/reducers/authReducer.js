@@ -14,7 +14,7 @@ function loginReducer(state = {loading: false, loggedIn: false, error: null}, ac
         loggedIn: true,
         error: null,
       });
-    case LOGOUT:
+    case LOGOUT: 
       return Object.assign({}, state, {
         loading: false,
         loggedIn: false,

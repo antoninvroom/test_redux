@@ -9,6 +9,17 @@ import { Card, CardSection, Button } from '../../components/common';
 
 
 class Login extends Component {
+    componentDidMount() {
+      if(this.props.auth.loggedIn) {
+        this.props.navigation.navigate('Home');
+      }
+    }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.auth.loggedIn) {
+      this.props.navigation.navigate('Home');
+    }
+  }
 
   render() {
     console.log(this.props.auth);
@@ -26,7 +37,7 @@ class Login extends Component {
       <View>
         <Card>
           <CardSection>
-            { auth.loggedIn ? this.props.navigation.navigate('Home', {coucou: 'coucou'}) : loginComponent }
+            { auth.loggedIn ? this.props.navigation.navigate('Home') : loginComponent }
           </CardSection>
         </Card>
       </View>
