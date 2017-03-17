@@ -1,5 +1,8 @@
 import { LOADING, ERROR, LOGIN, LOGOUT } from '../actions/types';
 
+/*
+  login state
+*/
 function loginReducer(state = {loading: false, loggedIn: false, error: null}, action) {
   console.log(action);
   switch(action.type) {

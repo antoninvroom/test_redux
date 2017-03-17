@@ -7,12 +7,18 @@ import {
 } from './types';
 import { facebookLogin, facebookLogout } from '../src/facebook';
 
+/*
+  loading action
+*/
 export function attempt() {
   return {
     type: LOADING
   };
 }
 
+/*
+ error action
+ */
 export function errors(err) {
   return {
     type: ERROR,
@@ -20,18 +26,27 @@ export function errors(err) {
   };
 }
 
+/*
+ user loggedin action
+ */
 export function loggedin() {
   return {
     type: LOGIN
   };
 }
 
+/*
+ user logged out
+ */
 export function loggedout() {
   return {
     type: LOGOUT
   };
 }
 
+/*
+ creating user
+ */
 export function addUser(id, name, profileURL, profileWidth, profileHeight) {
   return {
     type: ADD_USER,
@@ -43,6 +58,9 @@ export function addUser(id, name, profileURL, profileWidth, profileHeight) {
   };
 }
 
+/*
+ dispatch login in reducer
+ */
 export function login() {
   return dispatch => {
     console.log('Before attempt');
@@ -58,6 +76,9 @@ export function login() {
   };
 }
 
+/*
+ dispatch logout in reducer
+ */
 export function logout() {
   return dispatch => {
     dispatch(attempt());
